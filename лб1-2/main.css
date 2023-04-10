@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.map {
+    position: relative;
+    width: 814px;
+    height: 710px;
+}
+
+.map__city {
+    position: absolute;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.map__city img {
+    position: relative;
+    z-index: 9;
+}
+
+.map__city:hover img {
+    filter: saturate(2);
+}
+
+.map__city-brest {
+    left: 4px;
+    bottom: 49.01px;
+}
+
+.map__city-gomel {
+    bottom: 2.5px;
+    right: 77px;
+}
+
+.map__city-grodno {
+    left: 44px;
+    top: 165.24px;
+}
+
+.map__city-minsk {
+    left: 251.5px;
+    top: 169.5px;
+}
+
+.map__city-mogilev {
+    right: 3.5px;
+    top: 248px;
+}
+
+.map__city-vitebsk {
+    left: 265px;
+    top: 6px;
+}
+
+.map__city .city {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.info {
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 250px;
+    height: auto;
+    min-height: 200px;
+    padding: 5px 25px;
+    background: #fff;
+    transition: opacity .2s ease-in-out;
+    box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.1);
+}
+
+.info .card {
+    padding: 20px 0;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.info .card:last-of-type {
+    border-bottom: 0;
+}
+
+.info .card__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.info .card__desc {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.info .card__image img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.animation {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.animation__person {
+    position: absolute;
+}
+
+.animation__person img {
+    width: 60px;
+    height: auto;
+}
+
+/* 
+.animation__person img {
+    width: 100px;
+    height: auto;
+    offset-path: path('M32.9997 281C-111 451 273.558 547.715 413 461C568.18 364.497 442 -20.5001 322 1.99992C202 24.4999 369.5 186 254.5 206C139.5 226 213 68.4999 32.9997 281Z');
+    offset-distance: 0%;
+    animation: person 15s infinite ease-in-out;
+    transition: .3s all ease-in-out;
+}
+
+@keyframes person {
+    0% {
+        offset-distance: 0%;
+        transform: rotate(0deg);
+    }
+
+    20% {
+        offset-distance: 10%;
+        transform: rotate(-45deg);
+    }
+
+    40% {
+        offset-distance: 40%;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        offset-distance: 55%;
+        transform: rotate(100deg);
+    }
+
+    70% {
+        offset-distance: 70%;
+        transform: rotate(190deg);
+    }
+
+    80% {
+        offset-distance: 80%;
+        transform: rotate(270deg);
+    }
+
+    99% {
+        offset-distance: 100%;
+        transform: rotate(290deg);
+    }
+
+    100% {
+        offset-distance: 100%;
+        transform: rotate(-70deg);
+        transform: scaleX(-1);
+    }
+} */

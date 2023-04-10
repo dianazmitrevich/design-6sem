@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .app img {
+            width: 300px;
+        }
+    </style>
+    <div class="app"></div>
+    <script type="module">
+        import Cookies from './js.cookie.mjs';
+
+        const laba = document.querySelector(".app");
+
+        const yearData = {
+            "summer": ["/images/summer.webp", "Сегодня плаваем, так как наступило лето."],
+            "autumn": ["/images/autumn.jpeg", "Сегодня сидим, так как наступила осень."],
+            "winter": ["/images/winter.jpeg", "Сегодня лежим, так как наступила зима."],
+            "spring": ["/images/spring.jpeg", "Сегодня бегаем, так как наступила весна."],
+        };
+
+        function render(time) {
+            let image = document.createElement("img");
+            image.src = yearData[time[0]][0];
+
+            let text = document.createElement("p");
+            text.innerHTML += "О, привет, " + Cookies.get('login') + "!<br>";
+            text.innerHTML += "Вы посещали эту страницу " + time[1] + ".<br>";
+            text.innerHTML += yearData[time[0]][1];
+
+            laba.append(image, text);
+        }
+
+        function getTimeOfTheYear(month) {
+            ++month;
+
+            if (month > 0 && month < 3 || month == 12) {
+                return ["winter", "зимой"];
+            }
+
+            if (month > 2 && month < 6) {
+                return ["spring", "весной"];
+            }
+
+            if (month > 5 && month < 9) {
+                return ["summer", "летом"];
+            }
+
+            if (month > 8 && month < 12) {
+                return ["autumn", "осенью"];
+            }
+        }
+
+        render(getTimeOfTheYear((new Date).getMonth()));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Education Template</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<header id="header">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="navbar-brand">
+					<a class="logo" href="index.html">
+						<img src="./img/logo-b.svg" alt="logo">
+					</a>
+				</div>
+				<button class="navbar-toggle">
+					<span></span>
+				</button>
+			</div>
+			<nav id="nav">
+				<ul class="main-menu nav navbar-nav navbar-right">
+					<li><a href="#">Новые авто</a></li>
+					<li><a href="#">Авто с пробегом</a></li>
+					<li><a href="blog.html">Сервис</a></li>
+					<li><a href="contact.html">Оценка и выкуп</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="hero-area section">
+		<div class="bg-image bg-parallax overlay" style="background-image:url(./img/page-background.jpg)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 text-center">
+					<ul class="hero-area-tree">
+						<li><a href="index.html">Главная</a></li>
+						<li>Контакты</li>
+					</ul>
+					<h1 class="white-text">Связаться с нами</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contact" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="contact-form">
+						<h4>Отправить сообщение</h4>
+						<form>
+							<input class="input" type="text" name="name" placeholder="Имя">
+							<input class="input" type="email" name="email" placeholder="Почта">
+							<input class="input" type="text" name="subject" placeholder="Тема">
+							<textarea class="input" name="message" placeholder="Сообщение"></textarea>
+							<button class="main-button icon-button pull-right">Отправить</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<h4>Контактная информация</h4>
+					<ul class="contact-details">
+						<li><i class="fa fa-envelope"></i>email@email.com</li>
+						<li><i class="fa fa-phone"></i>122-547-223-45</li>
+						<li><i class="fa fa-map-marker"></i>4476 улица Клементинов</li>
+					</ul>
+					<div id="contact-map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="footer-logo">
+						<a class="logo" href="index.html">
+							<img src="./img/logo-b.svg" alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<ul class="footer-nav">
+						<li><a href="#">Новые авто</a></li>
+						<li><a href="#">Авто с пробегом</a></li>
+						<li><a href="blog.html">Сервис</a></li>
+						<li><a href="contact.html">Оценка и выкуп</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="bottom-footer" class="row">
+				<div class="col-md-4 col-md-push-8">
+					<ul class="footer-social">
+						<li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-md-8 col-md-pull-4"> Разработка сайта — d </div>
+			</div>
+		</div>
+	</footer>
+	<div id='preloader'>
+		<div class='preloader'></div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script type="text/javascript" src="js/google-map.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

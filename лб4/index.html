@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">Данные сессии<br></div>
+    <br><br>
+    <a href="2.html">Второе задание</a>
+    <script type="module">
+        import Cookies from './js.cookie.mjs';
+
+        const laba = document.querySelector(".app");
+
+        // 1
+        function getDateExpires(days) {
+            var date = new Date; date.setDate(date.getDate() + days);
+            return date;
+        }
+
+        Cookies.set(
+            "login",
+            prompt("Login?", ""),
+            {
+                expires: getDateExpires(2),
+            },
+        );
+        Cookies.set("password", prompt("Password?", ""));
+        Cookies.set("secretWord", prompt("Secret word?", ""));
+
+        if (prompt("Показать секретные данные? (введите секретное слово", "").toLowerCase() == Cookies.get("secretWord").toLowerCase() && Cookies.get("secretWord")) {
+            let arr = Cookies.get();
+
+            for (var key in Cookies.get()) {
+                laba.innerHTML += key + " - " + arr[key] + "<br>";
+            }
+        }
+
+        // Cookies.remove("login");
+        // Cookies.remove("password");
+    </script>
+</body>
+
+</html>
