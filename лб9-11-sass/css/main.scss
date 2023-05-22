@@ -1,0 +1,76 @@
+@mixin l-tablet {
+    @media (max-width: 1320px) {
+        @content;
+    }
+}
+
+@import "block/_variables";
+@import "block/_header";
+@import "block/_hero";
+@import "block/_card";
+
+@import url('https://fonts.cdnfonts.com/css/playfair-display');
+@import url('https://fonts.cdnfonts.com/css/manrope');
+// font-family: 'Playfair Display', sans-serif;
+// font-family: 'Manrope', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background: $body-bg;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.main-btn {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 19px 30px;
+    background: $main-btn-bg;
+    // background: #000;
+    color: #fff;
+    width: fit-content;
+
+    @if($main-btn-bg ==mix(#2d9fb6, #957a74)) {
+        color: #fff;
+    }
+
+    @else {
+        color: #000;
+    }
+
+    img {
+        margin-right: 12px;
+    }
+}
+
+.t-btn {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+    padding: 18px 32px;
+    border: 2px solid $main-btn-bg;
+    width: fit-content;
+}

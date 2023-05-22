@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0 20px;
+}
+
+.header__row {
+    height: 105px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__col {
+    display: flex;
+    align-items: center;
+}
+
+.header__col-phone {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-left: 40px;
+
+    @include l-tablet {
+        display: none;
+    }
+}
+
+.header__col-links {
+    display: flex;
+    align-items: center;
+    margin-right: 124px;
+
+    a {
+        display: block;
+        margin-left: 38px;
+        font-size: 1.7rem;
+        line-height: 2.6rem;
+    }
+}
