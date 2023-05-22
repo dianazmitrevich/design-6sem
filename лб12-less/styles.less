@@ -1,0 +1,210 @@
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+// 1 ––––––––––––––––––––––––––––
+.buttons-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.xs-mix {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 2px 4px;
+}
+
+.default-mix {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 12px;
+}
+
+.xl-mix {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 10px 16px;
+}
+
+.btn-default {
+    .default-mix;
+
+    background: #e0e0e0;
+    color: #333;
+    width: fit-content;
+    margin-right: 20px;
+    transition: all .25s ease-in-out
+}
+
+.btn-default:hover {
+    background: #e8e8e8;
+    cursor: pointer;
+}
+
+.btn-default-xs {
+    .xs-mix;
+}
+
+.btn-default-xl {
+    .xl-mix;
+}
+
+.btn-info {
+    .default-mix;
+
+    background: #3b83c0;
+    color: #fff;
+    width: fit-content;
+    margin-right: 20px;
+    transition: all .25s ease-in-out
+}
+
+.btn-info:hover {
+    background: #458ac6;
+    cursor: pointer;
+}
+
+.btn-info-xs {
+    .xs-mix;
+}
+
+.btn-info-xl {
+    .xl-mix;
+}
+
+.btn-secondary {
+    .default-mix;
+
+    background: #404245;
+    color: #fff;
+    width: fit-content;
+    margin-right: 20px;
+    transition: all .25s ease-in-out
+}
+
+.btn-secondary:hover {
+    background: #1b1c1d;
+    cursor: pointer;
+}
+
+.btn-secondary-xs {
+    .xs-mix;
+}
+
+.btn-secondary-xl {
+    .xl-mix;
+}
+
+// 2 ––––––––––––––––––––––––––––
+@color-base: #ff0000;
+@color-1: spin(@color-base, 30);
+
+.hovers {
+    margin-top: 30px;
+}
+
+.circle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: red;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+}
+
+.shape {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: @color-base;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: @color-1;
+        transform: rotate(45deg);
+        border-radius: 0;
+        width: 200px;
+        height: 100px;
+        cursor: pointer;
+    }
+}
+
+// 3 ––––––––––––––––––––––––––––
+.states {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.main-btn {
+    .default-mix;
+
+    background: #f2f2f2;
+    width: fit-content;
+    margin-bottom: 10px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.correct-mix {
+    background: rgb(76, 153, 43);
+    border-color: rgb(76, 153, 43);
+    color: #fff;
+}
+
+.wrong-mix {
+    background: rgb(214, 145, 81);
+    border-color: rgb(214, 145, 81);
+    color: #fff;
+}
+
+.error-mix {
+    background: rgb(214, 81, 81);
+    border-color: rgb(214, 81, 81);
+    color: #fff;
+}
+
+.main-btn-correct {
+    .correct-mix;
+}
+
+.main-btn-wrong {
+    .wrong-mix;
+}
+
+.main-btn-error {
+    .error-mix;
+}
+
+.round-btn {
+    border-radius: 10px;
+    padding-left: 40px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 100%;
+        background: rgb(255, 255, 255);
+        border-radius: 10px 0 0 10px;
+        opacity: .4;
+    }
+}
+
+.custom-btn {
+    background: transparent;
+    color: #1b1c1d;
+    border-width: 1px;
+    border-style: solid;
+}
