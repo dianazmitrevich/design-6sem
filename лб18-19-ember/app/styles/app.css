@@ -1,0 +1,61 @@
+.cartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 97%;
+  height: 800px;
+}
+
+header, footer {
+  background: rgba(0, 255, 255, 0.64);
+  font-size: 25pt;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+a {
+  border: black 3px solid;
+  border-radius: 10px;
+  font-size: 16pt;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+a:hover {
+  background: black;
+  color: rgba(0, 255, 255, 0.94);
+}
+
+.container {
+  background: rgba(0, 255, 255, 0.64);
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  margin: 20px;
+}
+.container img {
+  width: 180px;
+}
+.container .title {
+  font-size: 20pt;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+}
+.container .price {
+  font-size: 16pt;
+  font-family: Roboto, sans-serif;
+}
+
+/*# sourceMappingURL=app.css.map */
